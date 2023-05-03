@@ -22,7 +22,7 @@
                 @csrf
                     <input type="text" name="email" class="formUsername" placeholder="Username" id="login-username" autofocus required>
                     
-                    <input type="password" name="passsword" class="formPassword" placeholder="Password" id="login-pass">
+                    <input type="password" name="password" class="formPassword" placeholder="Password" id="login-pass">
                     <button type="submit" class="buttonLogin"
                         >Masuk</button
                         >
