@@ -15,19 +15,10 @@ class LoginControllers extends Controller
 
     public function authLogin(Request $request)
     {
-        // return $request;
-        $credentials = $request->validate([
-            'email' => ['required'],
-            'password' => ['required'],
-        ]);
-        return 'gagal';
-
-        if(Auth::attempt($credentials)){
+         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             $request->session()->regenerate();
-            return redirect()->intended('homeAdmin');
+            return redirect('/tes');
         }
-        // return redirect('register');
-        // return back()->with('loginError', 'Login Failed!');
     }
 
     public function authLogout(Request $request):RedirectResponse
