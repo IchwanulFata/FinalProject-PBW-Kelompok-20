@@ -1,0 +1,136 @@
+/* CSS untuk halaman Registrasi */
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar {
+    background: #62cdff;
+    border-radius: 0px 20px 20px 0px;
+    width: 450px;
+    height: 1024px;
+}
+
+.pict img {
+    width: 250px;
+    height: 260px;
+    border-radius: 180px;
+    justify-content: center;
+}
+.pict a {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 30px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2b3467;
+}
+
+input {
+    width: 500px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+textarea {
+    width: 500px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    width: 500px;
+    height: 150px;
+    border-style: solid;
+}
+
+.btnTambah {
+    width: 250px;
+    height: 60px;
+    background: #2b3467;
+    border-radius: 50px;
+
+    margin-top: 30px;
+    margin-left: 145px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.menuRekap {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.iconUp {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 90px;
+    top: -35px;
+    border-radius: 180px;
+}
+
+/* form {
+    margin: 0 auto;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+} */
+
+/* label {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+input[type="submit"] {
+    background-color: #2B3467;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #2B3467;
+} */
