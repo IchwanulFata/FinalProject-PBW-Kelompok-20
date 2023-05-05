@@ -25,6 +25,8 @@
   </head>
   <body>
     <div class="template">
+    
+    <!--tampilan sidebar-->
       <div class="sidebar">
         <div class="title">
           <h2>E-Voting</h2>
