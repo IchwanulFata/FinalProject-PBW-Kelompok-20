@@ -11,7 +11,7 @@
           <h2>E-Voting</h2>
         </div>
         <div class="time">
-          <span id="realTime">Kamis, 30-03-2023, 09:38:45</span>
+          <span id="date-time"></span>
         </div>
         <div class="menu">
           <div class="menuRekap">
@@ -36,12 +36,13 @@
       </div>
 
       <div class="d-flex justify-content-end mt-3 me-3">
-        <div
+        <a
+        href="/informasi-akun"
           class="userAccount d-flex justify-content-evenly align-items-center"
         >
-          <img src="{{ asset('/storage/images/user/fajri.png') }}" />
-          <h5>Ardiansyah</h5>
-        </div>
+          <img src="{{ asset('/storage/images/user/' .auth()->user()->image) }}" />
+          <h5>{{ auth()->user()->name }}</h5>
+        </a>
       </div>
 
       <div class="daftarCalon d-flex justify-content-center">
@@ -105,5 +106,21 @@
             document.getElementById("modal").style.display = "none";
         }
     });
+
+    function updateDateTime() {
+    var dateTime = new Date();
+    var options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric'
+    };
+    var dateTimeString = dateTime.toLocaleString('en-US', options);
+    document.getElementById('date-time').textContent = dateTimeString;
+}
+setInterval(updateDateTime, 1000); // Update every second
 </script>
 @endsection
