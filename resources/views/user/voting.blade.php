@@ -14,12 +14,15 @@
             <span id="date-time"></span>
         </div>
         <div class="menu">
+            <!-- Menu Rekap -->
             <div class="menuRekap">
                 <a href="/data-calon-ketua-user" id="iconRekap"><i data-feather="home"></i>Daftar Calon</a>
             </div>
+            <!-- Menu Caalon -->
             <div class="menuCalon">
                 <a class="fw-bold" id="iconCalon"><i data-feather="user"></i>Pemilihan Ketua</a>
             </div>
+            <!-- Menu logout -->
             <div class="menuLogout">
                 <a href="/logout" id="iconLogout"><i data-feather="log-out"></i>Logout</a>
             </div>
@@ -27,6 +30,7 @@
     </div>
 
     <div class="d-flex justify-content-end mt-3 me-3">
+        <!-- Informasi Akun -->
         <a href="/informasi-akun" class="userAccount d-flex justify-content-evenly align-items-center">
             <img src="{{ asset('/storage/images/user/' .auth()->user()->image) }}" />
             <h5 style="text-decoration: none;">{{ auth()->user()->name }}</h5>
@@ -61,7 +65,7 @@
 
 </div>
 <script>
-// Update date and time
+// Update tanggal dan waktu
 function updateDateTime() {
     var dateTime = new Date();
     var options = {
@@ -77,7 +81,7 @@ function updateDateTime() {
     document.getElementById('date-time').textContent = dateTimeString;
 }
 
-setInterval(updateDateTime, 1000); // Update every second
+setInterval(updateDateTime, 1000); // Update setiap detik
 
 function showPopup() {
     alert("Terima Kasih Sudah Memilih !!!");

@@ -28,14 +28,17 @@ use App\Http\Controllers\votingController;
 //     return view('welcome');
 // });
 
+//Route unntuk registrasi pengguna
 Route::get('/register', [RegisUserController::class, 'register'])->middleware('guest');
 
 Route::post('/post-register', [RegisUserController::class, 'inputRegister']);
 
+//Route untuk halaman login pengguna
 Route::get('/', [LoginUserControllers::class, 'loginUser'])->name('loginUser')->middleware('guest');
 
 Route::post('/login', [LoginUserControllers::class, 'authLoginUser']);
 
+//Route untuk logout pengguna
 Route::get('/logout', [LoginUserControllers::class, 'authLogoutUser']);
 
 Route::get('/admin', [LoginAdminControllers::class, 'loginAdmin'])->name('loginAdmin')->middleware('guest');
@@ -66,8 +69,10 @@ Route::post('/post-time', [timeSetterController::class, 'index'])->middleware('a
 
 Route::get('/informasi-akun', [informasiAkunController::class, 'index'])->middleware('auth');
 
+//Route untuk melihat data calon ketua (tampilan pengguna)
 Route::get('/data-calon-ketua-user', [dataCalonKetuaUserController::class, 'index'])->middleware('auth');
 
+//Route untuk pemilihan (tapilan pengguna)
 Route::get('/voting-user', [votingController::class, 'index'])->middleware('auth');
 
 Route::post('/voting-user', [votingController::class, 'vote'])->middleware('auth');
