@@ -48,6 +48,32 @@ input {
     border-radius: 20px;
     margin-bottom: 100px;
 }
+.iconUp {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 90px;
+    top: -35px;
+    border-radius: 180px;
+}
+
+.btnDaftar {
+    width: 250px;
+    height: 60px;
+    background: #2b3467;
+    border-radius: 50px;
+
+    margin-top: 30px;
+    margin-left: 145px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
 
 /* .menuRekap {
     position: absolute;

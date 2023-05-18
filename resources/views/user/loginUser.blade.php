@@ -10,7 +10,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet">
-    <link rel="stylesheet" href="{{('css/loginUser.css')}}">
+    <link rel="stylesheet" href="{{('css/user/loginUser.css')}}">
+    
 
 </head>
 <body>
@@ -20,10 +21,10 @@
             <h2>Login</h2>
             <form action="{{ url('/login') }}" method="post">
                 @csrf
-                    <input type="text" name="email" class="formUsername" placeholder="Username" id="login-username" autofocus required>
+                    <input type="email" name="email" class="formUsername" placeholder="Email" id="login-username" autofocus required>
                     
-                    <input type="password" name="passsword" class="formPassword" placeholder="Password" id="login-pass">
-                    <button type="submit" class="buttonLogin"
+                    <input type="password" name="password" class="formPassword" placeholder="Password" id="login-pass">
+                    <button type="submit" class="buttonLogin mb-2"
                         >Masuk</button
                         >
             </form>

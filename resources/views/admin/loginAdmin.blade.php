@@ -10,20 +10,19 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
       rel="stylesheet">
-    <link rel="stylesheet" href="{{url('css/loginAdmin.css')}}">
+    <link rel="stylesheet" href="{{url('css/admin/loginAdmin.css')}}">
 </head>
 <body>
     <div class="sidebar">
         <h1>E-Voting</h1>
         <div class="login">
             <h2>Login</h2>
-            <form>
-                    <input type="text" value="" class="formUsername" placeholder="Username" id="login-username">
-                    <input type="password" value="" class="formLogin" placeholder="Password" id="login-pass">
+            <form action="{{ url('/admin') }}" method="post">
+                @csrf
+                <input type="email" name="email" class="formUsername" placeholder="Email" id="login-email">
+                <input type="password" name="password" class="formLogin" placeholder="Password" id="login-pass">
+                <button  type="submit" class="buttonLogin">Masuk</button>
             </form>
-            <a href="/homeAdmin">
-                <button  type="button" class="buttonLogin">Masuk</button>
-            </a>
             </div>
         </div>  
     </div>

@@ -14,7 +14,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: var(--bg);
+    background-color: #62cdff;
     color: #000;
 }
 
@@ -85,13 +85,14 @@ input {
     margin-top: 60px;
 }
 
-/* .login button{
+.login button {
     width: 190px;
     height: 50px;
-    background: #2B3467;
+    background: #2b3467;
     border-radius: 50px;
 
     margin-top: 30px;
+    margin-bottom: 10px;
     margin-left: 145px;
     font-style: normal;
     font-weight: 600;
@@ -100,5 +101,5 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    color:#FFFFFF;
-} */
+    color: #ffffff;
+}

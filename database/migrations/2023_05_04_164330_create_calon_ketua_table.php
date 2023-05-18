@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('calon_ketua', function (Blueprint $table) {
             $table->id();
             $table->string('image')->default('icons8-user-100.png');
-            $table->string('name')->nullable();
-            $table->string('nis');
-            $table->string('email');
-            $table->string('status')->default('Belum Memilih');
-            $table->string('password');
+            $table->string('nis')->unique();
+            $table->string('nama_calon')->nullable();
+            $table->string('visi');
+            $table->string('misi');
+            // $table->integer('total_suara')->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('calon_ketua');
     }
 };

@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('calons', function (Blueprint $table) {
+        Schema::create('time_setters', function (Blueprint $table) {
             $table->id();
-            $table->username();
-            $table->password();
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('calons');
+        Schema::dropIfExists('time_setter');
     }
 };
