@@ -51,7 +51,7 @@
                     </div>
                     <div class="pict col-md-2 mt-5">
                         <!-- Tampilan gambar profil -->
-                        <img src="asset('/storage/images/user' .$user->image)" class="d-flex justify-content-center" />
+                        <img src="{{url('/images/icons8-user-100.png')}}" class="d-flex justify-content-center" />
 
                         <div class="input-group mb-3 iconUp">
                             <!-- Tombol untuk memilih gambar -->
