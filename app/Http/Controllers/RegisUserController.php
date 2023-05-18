@@ -10,7 +10,7 @@ class RegisUserController extends Controller
 {
     
     public function register(){
-        return view('user\registerUser');
+        return view('user.registerUser');
     }
     
     public function inputRegister(Request $request){
@@ -24,7 +24,7 @@ class RegisUserController extends Controller
             $request->validate([
                 'password' => 'required|confirmed|min:6'
             ]);
-            // return $input['image'];
+            
             $user = User::create([
                 'image' => $input['image'], 
                 'name' => $request->nama,
@@ -40,4 +40,3 @@ class RegisUserController extends Controller
 
 
 }
-

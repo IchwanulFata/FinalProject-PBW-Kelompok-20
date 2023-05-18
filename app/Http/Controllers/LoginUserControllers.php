@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Auth;
 class LoginUserControllers extends Controller
 {
     public function loginUser(){
-        return view('user\loginUser');
+        return view('user.loginUser');
     }
 
     public function authLoginUser(Request $request)
     {
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             $request->session()->regenerate();
-            return redirect('/');
+            return redirect('/data-calon-ketua-user');
         }
     }
 

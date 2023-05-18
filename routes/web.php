@@ -10,6 +10,8 @@ use App\Http\Controllers\dataPemilihController;
 use App\Http\Controllers\timeSetterController;
 use App\Http\Controllers\informasiAkunController;
 use App\Http\Controllers\dataCalonKetuaUserController;
+use App\Http\Controllers\votingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +67,7 @@ Route::post('/post-time', [timeSetterController::class, 'index'])->middleware('a
 Route::get('/informasi-akun', [informasiAkunController::class, 'index'])->middleware('auth');
 
 Route::get('/data-calon-ketua-user', [dataCalonKetuaUserController::class, 'index'])->middleware('auth');
+
+Route::get('/voting-user', [votingController::class, 'index'])->middleware('auth');
+
+Route::post('/voting-user', [votingController::class, 'vote'])->middleware('auth');

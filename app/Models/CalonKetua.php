@@ -9,6 +9,6 @@ class CalonKetua extends Model
 {
     protected $table ='calon_ketua';
     protected $primaryKey ='id';
-    protected $fillable = ['image','nama_calon', 'nis', 'visi', 'misi'];
+    protected $fillable = ['image','nama_calon', 'nis', 'visi', 'misi', 'total_suara'];
     use HasFactory;
 }

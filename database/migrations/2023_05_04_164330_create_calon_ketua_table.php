@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nama_calon')->nullable();
             $table->string('visi');
             $table->string('misi');
-            // $table->integer('total_suara')->default(0);
+            $table->integer('total_suara')->default(0);
             $table->timestamps();
         });
     }
